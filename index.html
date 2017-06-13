@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+  <!-- See also the others themes -->
+  <link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Content starts here -->
+
+      <section data-markdown>
+        <textarea data-template>
+            ## A presentation template
+            ## Using reveal.js
+        </textarea>
+      </section>
+
+      <section data-markdown>
+        <textarea data-template>
+            #### Markdown
+            You **can** _use_ [Markdown](https://en.wikipedia.org/wiki/Markdown)
+            in `<section>` elements
+        </textarea>
+      </section>
+
+      <section data-markdown>
+        <textarea data-template>
+            #### Formulas
+            ... can be uses in Markdown
+
+            $$ \mathbf{A} \ \mathbf{s} = \mathbf{f} $$ 
+        </textarea>
+      </section>
+
+      <section>
+        <h4>Formulas</h4>
+        <p>But sometimes formulas and Markdown bite each other ...</p>
+        <p>
+          $$a_{i1}s_1 + a_{i2}s_2 + \dots + a_{in}s_n = \sum_{j=1}^{n}{a_{ij}s_j} = f_i $$
+        </p>
+      </section>
+
+      <section>
+        <img src="img/graph.png">
+      </section>
+
+      <section>
+        <h4>Code</h4>
+        <pre><code class="go">
+          package main
+
+          import "fmt"
+
+          func main() {
+            fmt.Println("Nice slides...")
+          }
+        </code></pre>
+      </section>
+
+      <!-- Content ends here -->
+    </div>
+  </div>
+
+  <script src="node_modules/reveal.js/js/reveal.js"></script>
+  <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: false,
+      slideNumber: false,
+      history: true,
+      math: {
+        mathjax: 'node_modules/mathjax/MathJax.js',
+        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+      },
+      dependencies: [
+
+        // Interpret Markdown in <section> elements
+        { src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+
+        // Syntax highlight for <code> elements
+        { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+
+        // MathJax
+        { src: 'node_modules/reveal.js/plugin/math/math.js', async: true }
+      ]
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "reveal-slides",
+    "version": "1.0.0",
+    "description": "A template for creating presentations with reveal.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/msrocka/reveal-slides.git"
+    },
+    "author": "msrocka",
+    "license": "CC0-1.0",
+    "dependencies": {
+        "mathjax": "^2.7.1",
+        "reveal.js": "^3.5.0"
+    }
+}
